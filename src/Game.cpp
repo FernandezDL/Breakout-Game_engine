@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Game.h"
 
-#define Num_blocks 70
+#define Num_blocks 10
 
 Rectangle ball;
 Rectangle paddle;
@@ -41,7 +41,7 @@ void Game::setup() {
 	int index = 0;
 	for(int i = 0; i < rows; i++) {
 		for(int j = 0; j < cols; j++) {
-			blocks[index] = Rectangle{(float)(j * (width + spacing)), (float)(i * (height + spacing)), (float)width, (float)height};
+			blocks[index] = Rectangle{spacing + (float)(j * (width + spacing)), spacing + (float)(i * (height + spacing)), (float)width, (float)height};
 
 			// Asignar color según la fila
 			switch(i) {
@@ -57,6 +57,10 @@ void Game::setup() {
 
 			index++;
 		}
+	}
+
+	for (int i = 0; i < Num_blocks; i++) {
+		blockAlive[i] = true;
 	}
 }
 
@@ -74,8 +78,19 @@ void Game::frame_end() {
 void Game::handle_events() {
 	float dT = GetFrameTime();
 	if (WindowShouldClose()) isRunning = false;
-	if (IsKeyDown(KEY_RIGHT)) paddle.x += paddle_sx * dT;
-	if (IsKeyDown(KEY_LEFT))  paddle.x -= paddle_sx * dT;
+	if (IsKeyDown(KEY_RIGHT)) {
+        paddle.x += paddle_sx * dT;
+        if (paddle.x + paddle.width > screen_width) {
+            paddle.x = screen_width - paddle.width;
+        }
+    }
+
+    if (IsKeyDown(KEY_LEFT)) {
+        paddle.x -= paddle_sx * dT;
+        if (paddle.x < 0) {
+            paddle.x = 0;
+        }
+    }
 }
 
 void Game::update() {
@@ -87,12 +102,44 @@ void Game::update() {
 	}
 	if (CheckCollisionRecs(ball, paddle)) {
 		ball_sy *= -1;
-		ball_sx = paddle_sx;
+
+		float paddleCenter = paddle.x + paddle.width / 2;
+		float ballCenter = ball.x + ball.width / 2;
+		float offset = (ballCenter - paddleCenter) / (paddle.width / 2);  // -1 a 1
+		ball_sx += offset * 50;
+
+		if (ball_sx > 0) ball_sx += 5;
+		else ball_sx -= 5;
+
+		if (ball_sy > 0) ball_sy += 5;
+		else ball_sy -= 5;
 	}
+
+	// Colisión con bloques
+    for (int i = 0; i < Num_blocks; i++) {
+        if (blockAlive[i] && CheckCollisionRecs(ball, blocks[i])) {
+            blockAlive[i] = false;  // destruir el bloque
+            ball_sy *= -1;          // cambiar dirección vertical
+        }
+    }
+
 	if (ball.y < 0) ball_sy *= -1;
 	
 	ball.x += ball_sx * dT;
 	ball.y += ball_sy * dT;
+
+	bool win = true;
+	for (int i = 0; i < Num_blocks; i++) {
+		if (blockAlive[i]) {
+			win = false;
+			break;
+		}
+	}
+
+	if (win) {
+		std::cout << "You win!" << std::endl;
+		exit(0);
+	}
 }
 
 void Game::render() {
@@ -102,8 +149,10 @@ void Game::render() {
 	DrawRectangleRec(paddle, BLACK);
 
 	for (int i = 0; i < Num_blocks; i++) {
-        DrawRectangleRec(blocks[i], blockColors[i]);
-    }
+		if (blockAlive[i]) {
+			DrawRectangleRec(blocks[i], blockColors[i]);
+		}
+	}
 }
 
 void Game::clean() {

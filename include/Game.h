@@ -22,4 +22,5 @@ private:
   bool isRunning;
   Rectangle blocks[70];
   Color blockColors[70];
+  bool blockAlive[70];
 };
