@@ -20,4 +20,6 @@ private:
   int screen_width;
   int screen_height;
   bool isRunning;
+  Rectangle blocks[70];
+  Color blockColors[70];
 };
