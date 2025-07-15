@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/UVG/Game_engine/Breakout-Game_engine/build/cmake_install.cmake",
+		"D:/UVG/Game_engine/raylib/build/cmake_install.cmake",
+		"D:/UVG/Game_engine/raylib/build/raylib/cmake_install.cmake",
+		"D:/UVG/Game_engine/raylib/build/raylib/external/glfw/cmake_install.cmake",
+		"D:/UVG/Game_engine/raylib/build/raylib/external/glfw/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
