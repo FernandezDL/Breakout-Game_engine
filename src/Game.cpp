@@ -95,11 +95,22 @@ void Game::handle_events() {
 
 void Game::update() {
 	float dT = GetFrameTime();
-	if (ball.x >= screen_width || ball.x < 0) ball_sx *= -1;
+	
+	if (ball.x <= 0) {
+		ball.x = 0;
+		ball_sx *= -1;
+	}
+	
+	if (ball.x + ball.width >= screen_width) {
+		ball.x = screen_width - ball.width;
+		ball_sx *= -1;
+	}
+
 	if (ball.y >= screen_height) {
 		std::cout<<"YOU FAIL";
 		exit(1);
 	}
+
 	if (CheckCollisionRecs(ball, paddle)) {
 		ball_sy *= -1;
 
