@@ -1,7 +1,7 @@
 #include "Game.h"
 
 int main() {
-    Game game("Breakout", 1055, 700);
+    Game game("Final", 1055, 700);
     game.setup();
 
     while (game.running()) {
