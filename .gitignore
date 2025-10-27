@@ -1,0 +1,41 @@
+# --- CMake / builds ---
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# --- Binaries / objects ---
+*.exe
+*.dll
+*.lib
+*.a
+*.so
+*.dylib
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.rsp
+*.map
+*.pch
+*.stackdump
+
+# --- Logs ---
+*.log
+
+# --- IDE ---
+.vscode/
+.vs/
+*.sln
+*.vcxproj*
+.idea/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+

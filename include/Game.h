@@ -1,5 +1,6 @@
 #pragma once
 #include <raylib.h>
+#include <entt/entt.hpp>
 
 class Game {
 public:
@@ -16,11 +17,13 @@ public:
   bool running();
 
 private:
-  int counter;
-  int screen_width;
-  int screen_height;
-  bool isRunning;
-  Rectangle blocks[70];
-  Color blockColors[70];
-  bool blockAlive[70];
+  int  screen_width;
+  int  screen_height;
+  bool isRunning{true};
+
+  entt::registry r;
+  entt::entity   paddle{entt::null};
+  entt::entity   ball{entt::null};
+
+  bool intersects(const Rectangle& a, const Rectangle& b) const;
 };
