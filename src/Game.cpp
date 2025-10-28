@@ -19,7 +19,7 @@ Game::~Game() {
 
 void Game::setup() {
     if (currentScene) currentScene->setup();
-    
+
     InitWindow(800, 450, "Final");
     SetTargetFPS(60);
     SetExitKey(KEY_NULL);          // Desactiva ESC para que no cierre sola
@@ -52,7 +52,7 @@ void Game::render() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
     if (currentScene) currentScene->render();
-    DrawText(TextFormat("FPS: %.2f", FPS), 10, 10, 20, DARKGRAY);
+    DrawText(TextFormat("FPS: %.2f", FPS), 10, 10, 20, BLACK);
     EndDrawing();
 }
 

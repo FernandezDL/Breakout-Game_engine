@@ -102,13 +102,35 @@ void Scene::setup() {
 
     if (hero.id == 0) TraceLog(LOG_ERROR, "HERO NOT LOADED");
     if (bg.id == 0) TraceLog(LOG_ERROR, "BACKGROUND NOT LOADED");
+
+    arbCols = 4;
+    arbRows = 4;
+    arbTotalFrames = arbCols * arbRows;
+
+    arbFrameW = hero.width  / arbCols;
+    arbFrameH = hero.height / arbRows;
+
+    arbFps = 8.0f;      // 8 fps de animación
+    arbAcc = 0.0f;
+    arbFrame = 0;
+
+    arbPos = { 300, 100 };
+    arbScale = 0.5f;
 }
 
 void Scene::update() {
     const float dt = GetFrameTime();
-    system_input(reg, dt);
-    system_movement(reg, dt);
-    system_animation(reg, dt);
+    // system_input(reg, dt);
+    // system_movement(reg, dt);
+    // system_animation(reg, dt);
+
+    arbAcc += dt;
+
+    const float step = 1.0f / arbFps;
+    while (arbAcc >= step) {
+        arbAcc -= step;
+        arbFrame = (arbFrame + 1) % arbTotalFrames;
+    }
 }
 
 void Scene::render() {
@@ -125,11 +147,25 @@ void Scene::render() {
         DrawText("No se cargo el fondo", 20, 20, 20, RED);
     }
 
-    // 2) “Personaje”/sprite simple (prueba de dibujo)
+    // --- Árbol animado ---
     if (hero.id) {
-        DrawTexture(hero, 100, 100, WHITE);
-    } else {
-        DrawText("No se cargo el hero", 20, 50, 20, RED);
+        int col = arbFrame % arbCols;
+        int row = arbFrame / arbCols;
+
+        Rectangle src{
+            (float)(col * arbFrameW),
+            (float)(row * arbFrameH),
+            (float)arbFrameW,
+            (float)arbFrameH
+        };
+
+        float w = arbFrameW * arbScale;
+        float h = arbFrameH * arbScale;
+
+        Rectangle dst{ arbPos.x, arbPos.y, w, h };
+        Vector2 origin{ w/2.0f, h/2.0f }; // anclado al centro (opcional)
+
+        DrawTexturePro(hero, src, dst, origin, 0.0f, WHITE);
     }
 }
 
