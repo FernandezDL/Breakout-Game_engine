@@ -33,15 +33,12 @@ static void system_animation(entt::registry& reg, float dt) {
         auto& s = view.get<Sprite>(e);
         auto& t = view.get<Transform2D>(e);
 
-        // decidir estado por velocidad
         std::string state;
         if (t.velocity.x == 0 && t.velocity.y == 0) {
-            // idle: preserva la última dirección (a.state)
             if (a.state.rfind("walk_", 0) == 0)
-                a.state.replace(0, 4, "idle"); // walk_* -> idle_*
+                a.state.replace(0, 4, "idle");
             state = a.state;
         } else {
-            // dirección dominante
             if (std::abs(t.velocity.x) > std::abs(t.velocity.y))
                 state = (t.velocity.x > 0) ? "walk_right" : "walk_left";
             else
@@ -110,31 +107,96 @@ void Scene::setup() {
     arbFrameW = hero.width  / arbCols;
     arbFrameH = hero.height / arbRows;
 
-    arbFps = 8.0f;      // 8 fps de animación
+    arbFps = 8.0f;
     arbAcc = 0.0f;
     arbFrame = 0;
+    animStartCol = 0;    
+    animEndCol   = 1;
+    animRow = 0;
+    animCol = animStartCol;
 
     arbPos = { 300, 100 };
     arbScale = 0.5f;
+    moveSpeed = 140.0f;
 }
 
 void Scene::update() {
-    const float dt = GetFrameTime();
-    // system_input(reg, dt);
-    // system_movement(reg, dt);
-    // system_animation(reg, dt);
+    float dt = GetFrameTime();
 
+    // --- INPUT & MOVIMIENTO ---
+    float vx = 0.0f, vy = 0.0f;
+    if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) vx += 1.0f;
+    if (IsKeyDown(KEY_LEFT)  || IsKeyDown(KEY_A)) vx -= 1.0f;
+    if (IsKeyDown(KEY_DOWN)  || IsKeyDown(KEY_S)) vy += 1.0f;
+    if (IsKeyDown(KEY_UP)    || IsKeyDown(KEY_W)) vy -= 1.0f;
+
+    bool moving = (vx != 0.0f || vy != 0.0f);
+
+    // Normaliza diagonal
+    if (moving) {
+        float len = sqrtf(vx*vx + vy*vy);
+        vx /= len; vy /= len;
+    }
+
+    // Mover
+    arbPos.x += vx * moveSpeed * dt;
+    arbPos.y += vy * moveSpeed * dt;
+
+    // Mantener dentro de pantalla
+    float w = arbFrameW * arbScale;
+    float h = arbFrameH * arbScale;
+    float minX = w * 0.5f, maxX = GetScreenWidth()  - w * 0.5f;
+    float minY = h * 0.5f, maxY = GetScreenHeight() - h * 0.5f;
+    if (arbPos.x < minX) arbPos.x = minX;
+    if (arbPos.x > maxX) arbPos.x = maxX;
+    if (arbPos.y < minY) arbPos.y = minY;
+    if (arbPos.y > maxY) arbPos.y = maxY;
+
+    // --- ANIMACIÓN ---
+    int newRow        = animRow;
+    int newStartCol   = animStartCol;
+    int newEndCol     = animEndCol;
+    float newFps      = arbFps;
+
+    if (!moving) {
+        // IDLE: fila 0, columnas 0..1
+        newRow = 0; newStartCol = 0; newEndCol = 1; newFps = 4.0f;
+    } else {
+        // WALK: usa la fila por dirección
+        if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D))      newRow = 2;
+        else if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A))  newRow = 1;
+        else                                               newRow = 3;
+        newStartCol = 0; newEndCol = 3; newFps = 10.0f;
+    }
+
+    // Si cambió el rango (fila o columnas), resetea ciclo
+    bool rangeChanged = (newRow != animRow) ||
+                        (newStartCol != animStartCol) ||
+                        (newEndCol != animEndCol);
+
+    if (rangeChanged) {
+        animRow = newRow;
+        animStartCol = newStartCol;
+        animEndCol   = newEndCol;
+        arbFps = newFps;
+        animCol = animStartCol;   // reinicia al primer frame del rango
+        arbAcc = 0.0f;            // reinicia temporizador
+    } else {
+        arbFps = newFps;
+    }
+
+    // --- Avance de frames por tiempo ---
     arbAcc += dt;
-
     const float step = 1.0f / arbFps;
     while (arbAcc >= step) {
         arbAcc -= step;
-        arbFrame = (arbFrame + 1) % arbTotalFrames;
+        animCol++;
+        if (animCol > animEndCol) animCol = animStartCol;
     }
 }
 
 void Scene::render() {
-    // 1) Fondo (escala a tamaño de ventana)
+    // Fondo
     if (bg.id) {
         const int sw = GetScreenWidth();
         const int sh = GetScreenHeight();
@@ -142,19 +204,15 @@ void Scene::render() {
         const Rectangle dst = { 0, 0, (float)sw, (float)sh };
         DrawTexturePro(bg, src, dst, {0,0}, 0.0f, WHITE);
     } else {
-        // Fallback visible para depurar
         DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), DARKGREEN);
         DrawText("No se cargo el fondo", 20, 20, 20, RED);
     }
 
-    // --- Árbol animado ---
+    // Sprite animado
     if (hero.id) {
-        int col = arbFrame % arbCols;
-        int row = arbFrame / arbCols;
-
         Rectangle src{
-            (float)(col * arbFrameW),
-            (float)(row * arbFrameH),
+            (float)(animCol * arbFrameW),
+            (float)(animRow * arbFrameH),
             (float)arbFrameW,
             (float)arbFrameH
         };
@@ -163,7 +221,7 @@ void Scene::render() {
         float h = arbFrameH * arbScale;
 
         Rectangle dst{ arbPos.x, arbPos.y, w, h };
-        Vector2 origin{ w/2.0f, h/2.0f }; // anclado al centro (opcional)
+        Vector2 origin{ w/2.0f, h/2.0f };  
 
         DrawTexturePro(hero, src, dst, origin, 0.0f, WHITE);
     }
