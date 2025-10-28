@@ -96,9 +96,27 @@ static void system_render(entt::registry& reg, Texture2D& bg) {
 void Scene::setup() {
     bg = LoadTexture(".\\assets\\background\\grass.jpeg");  
     hero = LoadTexture(".\\assets\\sprites\\arbol.png");  
+    bee = LoadTexture(".\\assets\\sprites\\abeja.png");
 
     if (hero.id == 0) TraceLog(LOG_ERROR, "HERO NOT LOADED");
     if (bg.id == 0) TraceLog(LOG_ERROR, "BACKGROUND NOT LOADED");
+    if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
+
+    SetTextureFilter(bee, TEXTURE_FILTER_POINT);
+
+    if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
+
+    if (!bee.id) {
+        TraceLog(LOG_ERROR, "BEE NOT LOADED");
+    } else {
+        // spawnea 2 abejas en posiciones aleatorias visibles
+        for (int i = 0; i < 2; ++i) {
+            float x = (float)GetRandomValue(80, GetScreenWidth()  - 80);
+            float y = (float)GetRandomValue(80, GetScreenHeight() - 80);
+            spawnBee({x, y});
+        }
+        TraceLog(LOG_INFO, "Spawned %d bees", (int)bees.size());
+    }
 
     arbCols = 4;
     arbRows = 4;
@@ -118,6 +136,15 @@ void Scene::setup() {
     arbPos = { 300, 100 };
     arbScale = 0.5f;
     moveSpeed = 140.0f;
+
+    // Abeja
+    BeeEnemy b;
+    b.cols = 4;
+    b.rows = 2;
+    b.frameW = bee.width  / b.cols; 
+    b.frameH = bee.height / b.rows;
+    b.startCol = 0;
+    b.endCol   = 3; 
 }
 
 void Scene::update() {
@@ -158,18 +185,15 @@ void Scene::update() {
     int newEndCol     = animEndCol;
     float newFps      = arbFps;
 
-    if (!moving) {
-        // IDLE: fila 0, columnas 0..1
+    if (!moving) { // IDLE
         newRow = 0; newStartCol = 0; newEndCol = 1; newFps = 4.0f;
-    } else {
-        // WALK: usa la fila por dirección
+    } else { // WALK
         if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D))      newRow = 2;
         else if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A))  newRow = 1;
         else                                               newRow = 3;
         newStartCol = 0; newEndCol = 3; newFps = 10.0f;
     }
 
-    // Si cambió el rango (fila o columnas), resetea ciclo
     bool rangeChanged = (newRow != animRow) ||
                         (newStartCol != animStartCol) ||
                         (newEndCol != animEndCol);
@@ -193,6 +217,9 @@ void Scene::update() {
         animCol++;
         if (animCol > animEndCol) animCol = animStartCol;
     }
+
+    // --- ACTUALIZAR ABEJAS ---
+    for (auto& b : bees) updateBee(b, dt);
 }
 
 void Scene::render() {
@@ -225,10 +252,82 @@ void Scene::render() {
 
         DrawTexturePro(hero, src, dst, origin, 0.0f, WHITE);
     }
+
+    // Abejas
+    for (const auto& b : bees) renderBee(b);
 }
 
 void Scene::shutdown() {
     UnloadTexture(bg);
     UnloadTexture(hero);
-    // UnloadTexture(slime);
+    UnloadTexture(bee);
+}
+
+void Scene::spawnBee(Vector2 p) {
+    BeeEnemy b;
+    b.pos = p;
+
+    b.frameW = bee.width  / b.cols; // 32
+    b.frameH = bee.height / b.rows; // 32
+
+    float ang = GetRandomValue(0, 628) / 100.0f; // 0..6.28
+    b.vel = { cosf(ang)*b.speed, sinf(ang)*b.speed };
+    b.row = (b.vel.x >= 0) ? 0 : 1;
+
+    b.changeEvery = GetRandomValue(60, 150) / 100.0f; // 0.6..1.5 s
+
+    bees.push_back(b);
+}
+
+void Scene::updateBee(BeeEnemy& b, float dt) {
+    // cambio de rumbo aleatorio
+    b.changeTimer += dt;
+    if (b.changeTimer >= b.changeEvery) {
+        b.changeTimer = 0.0f;
+        b.changeEvery = GetRandomValue(60, 150) / 100.0f;
+        float ang = GetRandomValue(0, 628) / 100.0f;
+        b.vel = { cosf(ang)*b.speed, sinf(ang)*b.speed };
+    }
+
+    // mover
+    b.pos.x += b.vel.x * dt;
+    b.pos.y += b.vel.y * dt;
+
+    // rebotar en bordes (anclado al centro)
+    float w = b.frameW * b.scale, h = b.frameH * b.scale;
+    float minX = w*0.5f, maxX = GetScreenWidth()  - w*0.5f;
+    float minY = h*0.5f, maxY = GetScreenHeight() - h*0.5f;
+    if (b.pos.x < minX) { b.pos.x = minX; b.vel.x = fabsf(b.vel.x); }
+    if (b.pos.x > maxX) { b.pos.x = maxX; b.vel.x = -fabsf(b.vel.x); }
+    if (b.pos.y < minY) { b.pos.y = minY; b.vel.y = fabsf(b.vel.y); }
+    if (b.pos.y > maxY) { b.pos.y = maxY; b.vel.y = -fabsf(b.vel.y); }
+
+    // fila según dirección horizontal
+    b.row = (b.vel.x >= 0) ? 0 : 1;
+
+    // animación 0..3 (vuelo continuo)
+    b.acc += dt;
+    const float step = 1.0f / b.fps;
+    while (b.acc >= step) {
+        b.acc -= step;
+        b.col = (b.col + 1) > b.endCol ? b.startCol : (b.col + 1);
+    }
+}
+
+void Scene::renderBee(const BeeEnemy& b) {
+    if (!bee.id) {
+        // fallback visible si no cargó la textura
+        DrawCircleV(b.pos, 10, RED);
+        return;
+    }
+    Rectangle src{
+        (float)(b.col * b.frameW),
+        (float)(b.row * b.frameH),
+        (float)b.frameW,
+        (float)b.frameH
+    };
+    float w = b.frameW * b.scale, h = b.frameH * b.scale;
+    Rectangle dst{ b.pos.x, b.pos.y, w, h };
+    Vector2 origin{ w/2.0f, h/2.0f };
+    DrawTexturePro(bee, src, dst, origin, 0.0f, WHITE);
 }
