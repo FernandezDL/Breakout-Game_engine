@@ -1,7 +1,6 @@
 #include "Game.h"
 #include <raylib.h>
 #include <iostream>
-// #include "TextureManager.h"
 
 Game::Game(const char* title, int width, int height)
     : screen_width(width), screen_height(height) {
@@ -20,7 +19,16 @@ Game::~Game() {
 
 void Game::setup() {
     if (currentScene) currentScene->setup();
+    
+    InitWindow(800, 450, "Final");
+    SetTargetFPS(60);
+    SetExitKey(KEY_NULL);          // Desactiva ESC para que no cierre sola
+    isRunning = true;              // << MUY IMPORTANTE
+    frameCount = 0;                     // reinicia contador
+    TraceLog(LOG_INFO, "Game Start!");
+    currentScene->setup();
 }
+
 
 void Game::frameStart() {
     std::cout << "---- Frame: " << frameCount << " ----" << std::endl;
@@ -42,8 +50,34 @@ void Game::update() {
 
 void Game::render() {
     BeginDrawing();
-    ClearBackground(BLACK);
+    ClearBackground(RAYWHITE);
     if (currentScene) currentScene->render();
     DrawText(TextFormat("FPS: %.2f", FPS), 10, 10, 20, DARKGRAY);
     EndDrawing();
+}
+
+void Game::clean()  { currentScene->shutdown(); if (IsWindowReady()) CloseWindow(); }
+
+bool Game::running() const {
+    return isRunning;
+}
+
+void Game::setScene(Scene* newScene) {
+    currentScene = newScene;
+}
+
+Scene* Game::getCurrentScene() const {
+    return currentScene;
+}
+
+void Game::run() {
+    setup();
+    while (running()) {
+        frameStart();
+        handleEvents();
+        update();
+        render();
+        frameEnd();
+    }
+    clean();
 }

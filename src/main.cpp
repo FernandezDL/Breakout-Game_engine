@@ -1,17 +1,26 @@
 #include "Game.h"
 
 int main() {
-    Game game("Final", 1055, 700);
-    game.setup();
+    Game game("Final", 800, 450);
 
-    while (game.running()) {
-        game.frame_start();
-        game.handle_events();
-        game.update();
-        game.render();
-        game.frame_end();
-    }
+    Scene scene;                
+    game.setScene(&scene);
 
-    game.clean();
+    game.run(); 
     return 0;
 }
+
+
+// #include <raylib.h>
+// int main() {
+//     InitWindow(800, 450, "Sanity");
+//     SetTargetFPS(60);
+//     while (!WindowShouldClose()) {
+//         BeginDrawing();
+//         ClearBackground(RAYWHITE);
+//         DrawText("Raylib OK", 20, 20, 20, BLACK);
+//         EndDrawing();
+//     }
+//     CloseWindow();
+//     return 0;
+// }
