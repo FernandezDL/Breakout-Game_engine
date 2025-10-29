@@ -2,6 +2,7 @@
 #include <entt/entt.hpp>
 #include <raylib.h>
 #include <vector>
+#include "Tilemap.h"
 
 class Scene {
 public:
@@ -9,12 +10,18 @@ public:
 
     Texture2D bg{0};
     Texture2D hero{0};
-    // Texture2D slime{0};
 
     void setup();
     void update();
     void render();
     void shutdown();
+
+    Tilemap tilemap;
+
+    Tilemap& getTilemap() { return tilemap; }
+    const Tilemap& getTilemap() const { return tilemap; }
+
+    void renderTilemap();
 
 private:
     int arbCols = 4;            // columnas en el spritesheet
@@ -33,7 +40,6 @@ private:
     Vector2 arbPos{ 300, 100 }; // posición donde dibujar
     float arbScale = 0.5f;      // escala para dibujar grande
     float   moveSpeed = 140.0f; // velocidad de movimiento en píxeles por segundo
-
 
 struct BeeEnemy {
     Vector2 pos{0,0};

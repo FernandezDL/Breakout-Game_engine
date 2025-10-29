@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -50,13 +50,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_399c1/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_399c1.dir\\build.make CMakeFiles/cmTC_399c1.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj'
-        Building CXX object CMakeFiles/cmTC_399c1.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe   -std=gnu++20   -v -o CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_13456/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_13456.dir\\build.make CMakeFiles/cmTC_13456.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe'
+        Building CXX object CMakeFiles/cmTC_13456.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe   -std=gnu++20   -v -o CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -65,8 +65,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 
-        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\'
-         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1plus.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_399c1.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++20 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccO0I8dh.s
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\'
+         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1plus.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_13456.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++20 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccl7DUSf.s
         GNU C++20 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) version 13.3.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -91,17 +91,17 @@ events:
          C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 8bd09501900cb45b5b6761b38e63b559
-        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\'
-         C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccO0I8dh.s
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\'
+         C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccl7DUSf.s
         GNU assembler version 2.42 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.42
         COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../
-        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_399c1.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_399c1.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_399c1.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_399c1.dir/objects.a @CMakeFiles\\cmTC_399c1.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_399c1.dir/objects.a -Wl,--no-whole-archive -o cmTC_399c1.exe -Wl,--out-implib,libcmTC_399c1.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_13456.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_13456.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_13456.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_13456.dir/objects.a @CMakeFiles\\cmTC_13456.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_13456.dir/objects.a -Wl,--no-whole-archive -o cmTC_13456.exe -Wl,--out-implib,libcmTC_13456.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe
@@ -113,13 +113,13 @@ events:
         gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 
         COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_399c1.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_399c1.'
-         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccNtjjoE.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_399c1.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_399c1.dir/objects.a --no-whole-archive --out-implib libcmTC_399c1.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13456.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13456.'
+         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccAggTXM.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_13456.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_13456.dir/objects.a --no-whole-archive --out-implib libcmTC_13456.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
         collect2 version 13.3.0
-        C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccNtjjoE.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_399c1.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_399c1.dir/objects.a --no-whole-archive --out-implib libcmTC_399c1.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
+        C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccAggTXM.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_13456.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_13456.dir/objects.a --no-whole-archive --out-implib libcmTC_13456.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.42
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_399c1.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_399c1.'
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13456.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13456.'
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe'
         
       exitCode: 0
   -
@@ -160,13 +160,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj']
+        ignore line: [Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_399c1/fast]
-        ignore line: [C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_399c1.dir\\build.make CMakeFiles/cmTC_399c1.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-t7dljj']
-        ignore line: [Building CXX object CMakeFiles/cmTC_399c1.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe   -std=gnu++20   -v -o CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_13456/fast]
+        ignore line: [C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_13456.dir\\build.make CMakeFiles/cmTC_13456.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-203pbe']
+        ignore line: [Building CXX object CMakeFiles/cmTC_13456.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe   -std=gnu++20   -v -o CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -175,8 +175,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\']
-        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1plus.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_399c1.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++20 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccO0I8dh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\']
+        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1plus.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_13456.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++20 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccl7DUSf.s]
         ignore line: [GNU C++20 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r1) version 13.3.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -201,8 +201,8 @@ events:
         ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 8bd09501900cb45b5b6761b38e63b559]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\']
-        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccO0I8dh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\']
+        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccl7DUSf.s]
         ignore line: [GNU assembler version 2.42 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r1) 2.42]
         ignore line: [COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/]
@@ -213,12 +213,12 @@ events:
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_399c1.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_399c1.exe]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_399c1.dir\\link.txt --verbose=1]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_399c1.dir/objects.a]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_399c1.dir/objects.a @CMakeFiles\\cmTC_399c1.dir\\objects1.rsp]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_399c1.dir/objects.a -Wl --no-whole-archive -o cmTC_399c1.exe -Wl --out-implib libcmTC_399c1.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu++20' '-v' '-o' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_13456.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_13456.exe]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_13456.dir\\link.txt --verbose=1]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_13456.dir/objects.a]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_13456.dir/objects.a @CMakeFiles\\cmTC_13456.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_13456.dir/objects.a -Wl --no-whole-archive -o cmTC_13456.exe -Wl --out-implib libcmTC_13456.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe]
@@ -237,13 +237,13 @@ events:
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_399c1.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_399c1.']
-        link line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccNtjjoE.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_399c1.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_399c1.dir/objects.a --no-whole-archive --out-implib libcmTC_399c1.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13456.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13456.']
+        link line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccAggTXM.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_13456.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_13456.dir/objects.a --no-whole-archive --out-implib libcmTC_13456.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o]
           arg [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccNtjjoE.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccAggTXM.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -267,7 +267,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_399c1.exe] ==> ignore
+          arg [cmTC_13456.exe] ==> ignore
           arg [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o] ==> obj [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o]
           arg [-LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0] ==> dir [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0]
@@ -278,10 +278,10 @@ events:
           arg [-LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../..] ==> dir [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_399c1.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_13456.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_399c1.dll.a] ==> ignore
+          arg [libcmTC_13456.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -386,8 +386,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -396,13 +396,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e9311/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e9311.dir\\build.make CMakeFiles/cmTC_e9311.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c'
-        Building C object CMakeFiles/cmTC_e9311.dir/CMakeCCompilerABI.c.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d9230/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d9230.dir\\build.make CMakeFiles/cmTC_d9230.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm'
+        Building C object CMakeFiles/cmTC_d9230.dir/CMakeCCompilerABI.c.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -411,8 +411,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\'
-         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_e9311.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccyDO2jS.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\'
+         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_d9230.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccpfiiXF.s
         GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) version 13.3.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -431,17 +431,17 @@ events:
          C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 5ebc1e8bc775975cdd4ba6fc50a6a67d
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\'
-         C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccyDO2jS.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\'
+         C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccpfiiXF.s
         GNU assembler version 2.42 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.42
         COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_e9311.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_e9311.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_e9311.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e9311.dir/objects.a @CMakeFiles\\cmTC_e9311.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_e9311.dir/objects.a -Wl,--no-whole-archive -o cmTC_e9311.exe -Wl,--out-implib,libcmTC_e9311.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_d9230.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_d9230.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_d9230.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d9230.dir/objects.a @CMakeFiles\\cmTC_d9230.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_d9230.dir/objects.a -Wl,--no-whole-archive -o cmTC_d9230.exe -Wl,--out-implib,libcmTC_d9230.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe
@@ -453,13 +453,13 @@ events:
         gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 
         COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9311.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e9311.'
-         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccGxHtX5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_e9311.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e9311.dir/objects.a --no-whole-archive --out-implib libcmTC_e9311.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9230.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d9230.'
+         C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccf693N3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d9230.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_d9230.dir/objects.a --no-whole-archive --out-implib libcmTC_d9230.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
         collect2 version 13.3.0
-        C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccGxHtX5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_e9311.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e9311.dir/objects.a --no-whole-archive --out-implib libcmTC_e9311.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
+        C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccf693N3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d9230.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_d9230.dir/objects.a --no-whole-archive --out-implib libcmTC_d9230.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.42
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9311.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e9311.'
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9230.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d9230.'
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm'
         
       exitCode: 0
   -
@@ -494,13 +494,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c']
+        ignore line: [Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e9311/fast]
-        ignore line: [C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e9311.dir\\build.make CMakeFiles/cmTC_e9311.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-8shh2c']
-        ignore line: [Building C object CMakeFiles/cmTC_e9311.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d9230/fast]
+        ignore line: [C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d9230.dir\\build.make CMakeFiles/cmTC_d9230.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-7dpnnm']
+        ignore line: [Building C object CMakeFiles/cmTC_d9230.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -509,8 +509,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\']
-        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_e9311.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccyDO2jS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\']
+        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/cc1.exe -quiet -v -iprefix C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/ -D_REENTRANT C:\\Users\\diana\\Downloads\\mingw64\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_d9230.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\diana\\AppData\\Local\\Temp\\ccpfiiXF.s]
         ignore line: [GNU C17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r1) version 13.3.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -529,8 +529,8 @@ events:
         ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 5ebc1e8bc775975cdd4ba6fc50a6a67d]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\']
-        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccyDO2jS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\']
+        ignore line: [ C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj C:\\Users\\diana\\AppData\\Local\\Temp\\ccpfiiXF.s]
         ignore line: [GNU assembler version 2.42 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r1) 2.42]
         ignore line: [COMPILER_PATH=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/]
@@ -541,12 +541,12 @@ events:
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_e9311.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_e9311.exe]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_e9311.dir\\link.txt --verbose=1]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_e9311.dir/objects.a]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e9311.dir/objects.a @CMakeFiles\\cmTC_e9311.dir\\objects1.rsp]
-        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_e9311.dir/objects.a -Wl --no-whole-archive -o cmTC_e9311.exe -Wl --out-implib libcmTC_e9311.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_d9230.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_d9230.exe]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_d9230.dir\\link.txt --verbose=1]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_d9230.dir/objects.a]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_d9230.dir/objects.a @CMakeFiles\\cmTC_d9230.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_d9230.dir/objects.a -Wl --no-whole-archive -o cmTC_d9230.exe -Wl --out-implib libcmTC_d9230.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe]
@@ -565,13 +565,13 @@ events:
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e9311.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e9311.']
-        link line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccGxHtX5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_e9311.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_e9311.dir/objects.a --no-whole-archive --out-implib libcmTC_e9311.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d9230.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d9230.']
+        link line: [ C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe -plugin C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll -plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccf693N3.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_d9230.exe C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0 -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../.. -v --whole-archive CMakeFiles\\cmTC_d9230.dir/objects.a --no-whole-archive --out-implib libcmTC_d9230.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtend.o]
           arg [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/Users/diana/Downloads/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/13.3.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccGxHtX5.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\diana\\AppData\\Local\\Temp\\ccf693N3.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -595,7 +595,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_e9311.exe] ==> ignore
+          arg [cmTC_d9230.exe] ==> ignore
           arg [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o] ==> obj [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/crtbegin.o]
           arg [-LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0] ==> dir [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0]
@@ -606,10 +606,10 @@ events:
           arg [-LC:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../..] ==> dir [C:/Users/diana/Downloads/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.3.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_e9311.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_d9230.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_e9311.dll.a] ==> ignore
+          arg [libcmTC_d9230.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -696,8 +696,8 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-0resax"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-0resax"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-aoesqz"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-aoesqz"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -707,19 +707,19 @@ events:
       variable: "COMPILER_HAS_THOSE_TOGGLES"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-0resax'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-aoesqz'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8958e/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8958e.dir\\build.make CMakeFiles/cmTC_8958e.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-0resax'
-        Building C object CMakeFiles/cmTC_8958e.dir/src.c.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -DCOMPILER_HAS_THOSE_TOGGLES  -Werror=pointer-arith -o CMakeFiles\\cmTC_8958e.dir\\src.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0resax\\src.c
-        Linking C executable cmTC_8958e.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_8958e.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_8958e.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_8958e.dir/objects.a @CMakeFiles\\cmTC_8958e.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_8958e.dir/objects.a -Wl,--no-whole-archive -o cmTC_8958e.exe -Wl,--out-implib,libcmTC_8958e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8958e.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-0resax'
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fbc0f/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fbc0f.dir\\build.make CMakeFiles/cmTC_fbc0f.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-aoesqz'
+        Building C object CMakeFiles/cmTC_fbc0f.dir/src.c.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -DCOMPILER_HAS_THOSE_TOGGLES  -Werror=pointer-arith -o CMakeFiles\\cmTC_fbc0f.dir\\src.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-aoesqz\\src.c
+        Linking C executable cmTC_fbc0f.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fbc0f.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_fbc0f.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_fbc0f.dir/objects.a @CMakeFiles\\cmTC_fbc0f.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_fbc0f.dir/objects.a -Wl,--no-whole-archive -o cmTC_fbc0f.exe -Wl,--out-implib,libcmTC_fbc0f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fbc0f.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-aoesqz'
         
       exitCode: 0
   -
@@ -733,8 +733,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-pu9ore"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-pu9ore"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-xq729d"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-xq729d"
     cmakeVariables:
       CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -744,19 +744,19 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-pu9ore'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-xq729d'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_830fe/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_830fe.dir\\build.make CMakeFiles/cmTC_830fe.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-pu9ore'
-        Building C object CMakeFiles/cmTC_830fe.dir/src.c.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_830fe.dir\\src.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pu9ore\\src.c
-        Linking C executable cmTC_830fe.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_830fe.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_830fe.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_830fe.dir/objects.a @CMakeFiles\\cmTC_830fe.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_830fe.dir/objects.a -Wl,--no-whole-archive -o cmTC_830fe.exe -Wl,--out-implib,libcmTC_830fe.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_830fe.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-pu9ore'
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_92211/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_92211.dir\\build.make CMakeFiles/cmTC_92211.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-xq729d'
+        Building C object CMakeFiles/cmTC_92211.dir/src.c.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_92211.dir\\src.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xq729d\\src.c
+        Linking C executable cmTC_92211.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_92211.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_92211.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_92211.dir/objects.a @CMakeFiles\\cmTC_92211.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_92211.dir/objects.a -Wl,--no-whole-archive -o cmTC_92211.exe -Wl,--out-implib,libcmTC_92211.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_92211.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-xq729d'
         
       exitCode: 0
   -
@@ -767,8 +767,8 @@ events:
     checks:
       - "Looking for dinput.h"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-siksm9"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-siksm9"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-bb60mw"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-bb60mw"
     cmakeVariables:
       CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -778,19 +778,19 @@ events:
       variable: "DINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-siksm9'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-bb60mw'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_5f0c6/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_5f0c6.dir\\build.make CMakeFiles/cmTC_5f0c6.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-siksm9'
-        Building C object CMakeFiles/cmTC_5f0c6.dir/CheckIncludeFile.c.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_5f0c6.dir\\CheckIncludeFile.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-siksm9\\CheckIncludeFile.c
-        Linking C executable cmTC_5f0c6.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_5f0c6.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_5f0c6.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_5f0c6.dir/objects.a @CMakeFiles\\cmTC_5f0c6.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_5f0c6.dir/objects.a -Wl,--no-whole-archive -o cmTC_5f0c6.exe -Wl,--out-implib,libcmTC_5f0c6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_5f0c6.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-siksm9'
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_50af3/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_50af3.dir\\build.make CMakeFiles/cmTC_50af3.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-bb60mw'
+        Building C object CMakeFiles/cmTC_50af3.dir/CheckIncludeFile.c.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_50af3.dir\\CheckIncludeFile.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bb60mw\\CheckIncludeFile.c
+        Linking C executable cmTC_50af3.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_50af3.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_50af3.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_50af3.dir/objects.a @CMakeFiles\\cmTC_50af3.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_50af3.dir/objects.a -Wl,--no-whole-archive -o cmTC_50af3.exe -Wl,--out-implib,libcmTC_50af3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_50af3.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-bb60mw'
         
       exitCode: 0
   -
@@ -801,8 +801,8 @@ events:
     checks:
       - "Looking for xinput.h"
     directories:
-      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-59mzte"
-      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-59mzte"
+      source: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-ybr5jy"
+      binary: "D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-ybr5jy"
     cmakeVariables:
       CMAKE_C_FLAGS: "-fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith "
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -812,19 +812,19 @@ events:
       variable: "XINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-59mzte'
+        Change Dir: 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-ybr5jy'
         
-        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e382f/fast
-        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e382f.dir\\build.make CMakeFiles/cmTC_e382f.dir/build
-        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-59mzte'
-        Building C object CMakeFiles/cmTC_e382f.dir/CheckIncludeFile.c.obj
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_e382f.dir\\CheckIncludeFile.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-59mzte\\CheckIncludeFile.c
-        Linking C executable cmTC_e382f.exe
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_e382f.dir\\link.txt --verbose=1
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_e382f.dir/objects.a
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_e382f.dir/objects.a @CMakeFiles\\cmTC_e382f.dir\\objects1.rsp
-        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_e382f.dir/objects.a -Wl,--no-whole-archive -o cmTC_e382f.exe -Wl,--out-implib,libcmTC_e382f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_e382f.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-59mzte'
+        Run Build Command(s): C:/Users/diana/Downloads/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b6748/fast
+        C:/Users/diana/Downloads/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b6748.dir\\build.make CMakeFiles/cmTC_b6748.dir/build
+        mingw32-make[1]: Entering directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-ybr5jy'
+        Building C object CMakeFiles/cmTC_b6748.dir/CheckIncludeFile.c.obj
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe   -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -std=gnu99 -o CMakeFiles\\cmTC_b6748.dir\\CheckIncludeFile.c.obj -c D:\\UVG\\Game_engine\\Breakout-Game_engine\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ybr5jy\\CheckIncludeFile.c
+        Linking C executable cmTC_b6748.exe
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_b6748.dir\\link.txt --verbose=1
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_b6748.dir/objects.a
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b6748.dir/objects.a @CMakeFiles\\cmTC_b6748.dir\\objects1.rsp
+        C:\\Users\\diana\\Downloads\\mingw64\\bin\\gcc.exe -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith   -Wl,--whole-archive CMakeFiles\\cmTC_b6748.dir/objects.a -Wl,--no-whole-archive -o cmTC_b6748.exe -Wl,--out-implib,libcmTC_b6748.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b6748.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/UVG/Game_engine/Breakout-Game_engine/build/CMakeFiles/CMakeScratch/TryCompile-ybr5jy'
         
       exitCode: 0
 ...

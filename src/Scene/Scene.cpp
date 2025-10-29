@@ -4,6 +4,42 @@
 #include "Components/Animator.h"
 #include "Components/Input.h"
 #include "Components/Tags.h"
+#include "Systems/TilemapLoaderSystem.h"
+#include "Tilemap.h"
+#include <fstream>      
+#include <sstream>     
+#include <string>      
+#include <vector>
+
+static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
+    std::ifstream f(path);
+    if (!f) return false;
+
+    std::string line;
+    std::vector<int> data;
+    int width = -1, h = 0;
+
+    while (std::getline(f, line)) {
+        if (line.empty()) continue;
+        std::stringstream ss(line);
+        std::string cell; int w = 0;
+        while (std::getline(ss, cell, ',')) {
+            data.push_back(std::stoi(cell));
+            w++;
+        }
+        if (width < 0) width = w;
+        h++;
+    }
+    if (width <= 0 || h <= 0) return false;
+    W = width; H = h; out.swap(data);
+    return true;
+}
+
+static Rectangle IndexToSrc(int index, int tileW, int tileH, int cols) {
+    int sx = (index % cols) * tileW;
+    int sy = (index / cols) * tileH;
+    return Rectangle{ (float)sx, (float)sy, (float)tileW, (float)tileH };
+}
 
 static void system_input(entt::registry& reg, float dt) {
     auto view = reg.view<Transform2D, InputControlled, PlayerTag>();
@@ -94,13 +130,17 @@ static void system_render(entt::registry& reg, Texture2D& bg) {
 }
 
 void Scene::setup() {
-    bg = LoadTexture(".\\assets\\background\\grass.jpeg");  
+    // bg = LoadTexture(".\\assets\\background\\grass.jpeg");  
     hero = LoadTexture(".\\assets\\sprites\\arbol.png");  
     bee = LoadTexture(".\\assets\\sprites\\abeja.png");
 
     if (hero.id == 0) TraceLog(LOG_ERROR, "HERO NOT LOADED");
-    if (bg.id == 0) TraceLog(LOG_ERROR, "BACKGROUND NOT LOADED");
+    // if (bg.id == 0) TraceLog(LOG_ERROR, "BACKGROUND NOT LOADED");
     if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
+
+    TilemapLoaderSystem loader;
+    loader.setScene(this);   // <-- le pasas la escena
+    loader.update();
 
     SetTextureFilter(bee, TEXTURE_FILTER_POINT);
 
@@ -118,6 +158,7 @@ void Scene::setup() {
         TraceLog(LOG_INFO, "Spawned %d bees", (int)bees.size());
     }
 
+    // Arbol
     arbCols = 4;
     arbRows = 4;
     arbTotalFrames = arbCols * arbRows;
@@ -224,16 +265,18 @@ void Scene::update() {
 
 void Scene::render() {
     // Fondo
-    if (bg.id) {
-        const int sw = GetScreenWidth();
-        const int sh = GetScreenHeight();
-        const Rectangle src = { 0, 0, (float)bg.width, (float)bg.height };
-        const Rectangle dst = { 0, 0, (float)sw, (float)sh };
-        DrawTexturePro(bg, src, dst, {0,0}, 0.0f, WHITE);
-    } else {
-        DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), DARKGREEN);
-        DrawText("No se cargo el fondo", 20, 20, 20, RED);
-    }
+    renderTilemap();
+
+    // if (bg.id) {
+    //     const int sw = GetScreenWidth();
+    //     const int sh = GetScreenHeight();
+    //     const Rectangle src = { 0, 0, (float)bg.width, (float)bg.height };
+    //     const Rectangle dst = { 0, 0, (float)sw, (float)sh };
+    //     DrawTexturePro(bg, src, dst, {0,0}, 0.0f, WHITE);
+    // } else {
+    //     DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), DARKGREEN);
+    //     DrawText("No se cargo el fondo", 20, 20, 20, RED);
+    // }
 
     // Sprite animado
     if (hero.id) {
@@ -258,7 +301,7 @@ void Scene::render() {
 }
 
 void Scene::shutdown() {
-    UnloadTexture(bg);
+    // UnloadTexture(bg);
     UnloadTexture(hero);
     UnloadTexture(bee);
 }
@@ -330,4 +373,24 @@ void Scene::renderBee(const BeeEnemy& b) {
     Rectangle dst{ b.pos.x, b.pos.y, w, h };
     Vector2 origin{ w/2.0f, h/2.0f };
     DrawTexturePro(bee, src, dst, origin, 0.0f, WHITE);
+}
+
+void Scene::renderTilemap() {
+    const Tilemap &tm = tilemap;   
+    if (!tm.loaded || tm.tileset.id == 0) return;
+
+    const int W = tm.width;
+    const int H = tm.height;
+
+    for (int y = 0; y < H; ++y) {
+        for (int x = 0; x < W; ++x) {
+            const int idx = tm.tiles[y * W + x];
+            if (idx < 0) continue;
+
+            Rectangle src = IndexToSrc(idx, tm.tileW, tm.tileH, tm.tilesetCols);
+            Rectangle dst = { (float)(x * tm.tileW), (float)(y * tm.tileH),
+                              (float)tm.tileW, (float)tm.tileH };
+            DrawTexturePro(tm.tileset, src, dst, {0,0}, 0.0f, WHITE);
+        }
+    }
 }
