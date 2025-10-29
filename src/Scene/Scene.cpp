@@ -42,7 +42,7 @@ static Rectangle IndexToSrc(int idx, int tileW, int tileH, int cols, int spacing
     float x = margin + tx * (tileW + spacing);
     float y = margin + ty * (tileH + spacing);
 
-    const float eps = 0.01f; // pequeño “shrink” para no samplear bordes
+    const float eps = 0.01f;
     return { x + eps, y + eps, tileW - 2*eps, tileH - 2*eps };
 }
 
@@ -51,8 +51,8 @@ static Rectangle SrcFromIndex4x4(int idx, const Texture2D& tex) {
     const int tileW = tex.width  / cols;
     const int tileH = tex.height / rows;
 
-    int tx = idx % cols;   // 0..3
-    int ty = idx / cols;   // 0..3
+    int tx = idx % cols;   
+    int ty = idx / cols; 
 
     float x = (float)(tx * tileW);
     float y = (float)(ty * tileH);
@@ -148,16 +148,14 @@ static void system_render(entt::registry& reg, Texture2D& bg) {
 }
 
 void Scene::setup() {
-    // bg = LoadTexture(".\\assets\\background\\grass.jpeg");  
     hero = LoadTexture(".\\assets\\sprites\\arbol.png");  
     bee = LoadTexture(".\\assets\\sprites\\abeja.png");
 
     if (hero.id == 0) TraceLog(LOG_ERROR, "HERO NOT LOADED");
-    // if (bg.id == 0) TraceLog(LOG_ERROR, "BACKGROUND NOT LOADED");
     if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
 
     TilemapLoaderSystem loader;
-    loader.setScene(this);   // <-- le pasas la escena
+    loader.setScene(this);
     loader.update();
 
     SetTextureFilter(bee, TEXTURE_FILTER_POINT);
@@ -317,14 +315,14 @@ void Scene::spawnBee(Vector2 p) {
     BeeEnemy b;
     b.pos = p;
 
-    b.frameW = bee.width  / b.cols; // 32
-    b.frameH = bee.height / b.rows; // 32
+    b.frameW = bee.width  / b.cols; 
+    b.frameH = bee.height / b.rows; 
 
-    float ang = GetRandomValue(0, 628) / 100.0f; // 0..6.28
+    float ang = GetRandomValue(0, 628) / 100.0f;
     b.vel = { cosf(ang)*b.speed, sinf(ang)*b.speed };
     b.row = (b.vel.x >= 0) ? 0 : 1;
 
-    b.changeEvery = GetRandomValue(60, 150) / 100.0f; // 0.6..1.5 s
+    b.changeEvery = GetRandomValue(60, 150) / 100.0f;
 
     bees.push_back(b);
 }
@@ -366,7 +364,6 @@ void Scene::updateBee(BeeEnemy& b, float dt) {
 
 void Scene::renderBee(const BeeEnemy& b) {
     if (!bee.id) {
-        // fallback visible si no cargó la textura
         DrawCircleV(b.pos, 10, RED);
         return;
     }
@@ -389,7 +386,7 @@ void Scene::renderTilemap() {
     for (int y = 0; y < tm.height; ++y) {
         for (int x = 0; x < tm.width; ++x) {
             int raw = tm.tiles[y * tm.width + x];
-            int idx = (raw <= 0) ? -1 : (raw - 1); // si vienes de Tiled (1..16) -> 0..15
+            int idx = (raw <= 0) ? -1 : (raw - 1);
             if (idx < 0) continue;
 
             Rectangle src = SrcFromIndex4x4(idx, tm.tileset);

@@ -48,10 +48,10 @@ struct BeeEnemy {
     float   scale = 0.2f;
 
     // Anim
-    int cols = 4, rows = 2;     // 2 filas (arriba: derecha, abajo: izquierda)
+    int cols = 4, rows = 2;     
     int frameW = 0, frameH = 0;
-    int row = 0;                // 0 = mirando derecha, 1 = mirando izquierda
-    int col = 0;                // 0..3
+    int row = 0;               
+    int col = 0;                
     int startCol = 0, endCol = 3;
     float fps = 10.0f, acc = 0.0f;
 

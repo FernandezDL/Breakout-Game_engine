@@ -4,7 +4,6 @@
 #include <sstream>
 #include "Scene/Scene.h"
 
-// --- Función auxiliar privada ---
 static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
     std::ifstream f(path);
     if (!f) return false;
@@ -62,5 +61,5 @@ void TilemapLoaderSystem::update() {
     tm.loaded = true;
 
     TraceLog(LOG_INFO, "Tilemap cargado (%dx%d)", W, H);
-    done = true; // corre una sola vez
+    done = true;
 }
