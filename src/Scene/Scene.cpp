@@ -35,10 +35,28 @@ static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& o
     return true;
 }
 
-static Rectangle IndexToSrc(int index, int tileW, int tileH, int cols) {
-    int sx = (index % cols) * tileW;
-    int sy = (index / cols) * tileH;
-    return Rectangle{ (float)sx, (float)sy, (float)tileW, (float)tileH };
+static Rectangle IndexToSrc(int idx, int tileW, int tileH, int cols, int spacing = 0, int margin = 0) {
+    int tx = idx % cols;
+    int ty = idx / cols;
+
+    float x = margin + tx * (tileW + spacing);
+    float y = margin + ty * (tileH + spacing);
+
+    const float eps = 0.01f; // pequeño “shrink” para no samplear bordes
+    return { x + eps, y + eps, tileW - 2*eps, tileH - 2*eps };
+}
+
+static Rectangle SrcFromIndex4x4(int idx, const Texture2D& tex) {
+    const int cols = 4, rows = 4;
+    const int tileW = tex.width  / cols;
+    const int tileH = tex.height / rows;
+
+    int tx = idx % cols;   // 0..3
+    int ty = idx / cols;   // 0..3
+
+    float x = (float)(tx * tileW);
+    float y = (float)(ty * tileH);
+    return { x, y, (float)tileW, (float)tileH };
 }
 
 static void system_input(entt::registry& reg, float dt) {
@@ -267,17 +285,6 @@ void Scene::render() {
     // Fondo
     renderTilemap();
 
-    // if (bg.id) {
-    //     const int sw = GetScreenWidth();
-    //     const int sh = GetScreenHeight();
-    //     const Rectangle src = { 0, 0, (float)bg.width, (float)bg.height };
-    //     const Rectangle dst = { 0, 0, (float)sw, (float)sh };
-    //     DrawTexturePro(bg, src, dst, {0,0}, 0.0f, WHITE);
-    // } else {
-    //     DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), DARKGREEN);
-    //     DrawText("No se cargo el fondo", 20, 20, 20, RED);
-    // }
-
     // Sprite animado
     if (hero.id) {
         Rectangle src{
@@ -376,21 +383,19 @@ void Scene::renderBee(const BeeEnemy& b) {
 }
 
 void Scene::renderTilemap() {
-    const Tilemap &tm = tilemap;   
+    const Tilemap& tm = tilemap;
     if (!tm.loaded || tm.tileset.id == 0) return;
 
-    const int W = tm.width;
-    const int H = tm.height;
-
-    for (int y = 0; y < H; ++y) {
-        for (int x = 0; x < W; ++x) {
-            const int idx = tm.tiles[y * W + x];
+    for (int y = 0; y < tm.height; ++y) {
+        for (int x = 0; x < tm.width; ++x) {
+            int raw = tm.tiles[y * tm.width + x];
+            int idx = (raw <= 0) ? -1 : (raw - 1); // si vienes de Tiled (1..16) -> 0..15
             if (idx < 0) continue;
 
-            Rectangle src = IndexToSrc(idx, tm.tileW, tm.tileH, tm.tilesetCols);
+            Rectangle src = SrcFromIndex4x4(idx, tm.tileset);
             Rectangle dst = { (float)(x * tm.tileW), (float)(y * tm.tileH),
                               (float)tm.tileW, (float)tm.tileH };
-            DrawTexturePro(tm.tileset, src, dst, {0,0}, 0.0f, WHITE);
+            DrawTexturePro(tm.tileset, src, dst, {0,0}, 0, WHITE);
         }
     }
 }
