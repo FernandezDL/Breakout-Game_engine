@@ -389,9 +389,17 @@ void Scene::renderTilemap() {
             int idx = (raw <= 0) ? -1 : (raw - 1);
             if (idx < 0) continue;
 
-            Rectangle src = SrcFromIndex4x4(idx, tm.tileset);
-            Rectangle dst = { (float)(x * tm.tileW), (float)(y * tm.tileH),
-                              (float)tm.tileW, (float)tm.tileH };
+            Rectangle src = {
+                (float)((idx % 4) * 32),
+                (float)((idx / 4) * 32),
+                (float)32, (float)32
+            };
+
+            Rectangle dst = {
+                (float)(x * 48),
+                (float)(y * 48),
+                (float)48, (float)48
+            };
             DrawTexturePro(tm.tileset, src, dst, {0,0}, 0, WHITE);
         }
     }
