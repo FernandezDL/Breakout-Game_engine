@@ -4,6 +4,7 @@
 #include <sstream>
 #include "Scene/Scene.h"
 
+// Carga CSV a un vector<int> y devuelve ancho/alto en celdas.
 static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
     std::ifstream f(path);
     if (!f) return false;
@@ -18,7 +19,8 @@ static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& o
         std::string cell;
         int w = 0;
         while (std::getline(ss, cell, ',')) {
-            data.push_back(std::stoi(cell));
+            if (!cell.empty()) data.push_back(std::stoi(cell));
+            else data.push_back(0);
             w++;
         }
         if (width < 0) width = w;
@@ -40,15 +42,20 @@ void TilemapLoaderSystem::update() {
     tm.tileset = LoadTexture(".\\assets\\tiles\\tiles.png");
     if (tm.tileset.id == 0) {
         TraceLog(LOG_ERROR, "No pude cargar tileset");
-        done = true; 
+        done = true;
         return;
     }
 
     SetTextureFilter(tm.tileset, TEXTURE_FILTER_POINT);
-    tm.tileW = tm.tileH = 32;
+
+    // Define tamaño de tile y columnas del tileset
+    tm.tileW = 32;
+    tm.tileH = 32;
     tm.tilesetCols = tm.tileset.width / tm.tileW;
 
-    int W=0, H=0; std::vector<int> tiles;
+    // Carga el CSV del mapa
+    int W = 0, H = 0;
+    std::vector<int> tiles;
     if (!LoadCSV("assets/maps/level1.csv", W, H, tiles)) {
         TraceLog(LOG_ERROR, "No pude leer assets/maps/level1.csv");
         done = true;
@@ -59,6 +66,11 @@ void TilemapLoaderSystem::update() {
     tm.height = H;
     tm.tiles  = std::move(tiles);
     tm.loaded = true;
+
+    cols_  = W;           // columnas del CSV
+    rows_  = H;           // filas del CSV
+    tileW_ = tm.tileW;    
+    tileH_ = tm.tileH;    
 
     TraceLog(LOG_INFO, "Tilemap cargado (%dx%d)", W, H);
     done = true;

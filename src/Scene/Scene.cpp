@@ -5,11 +5,13 @@
 #include "Components/Input.h"
 #include "Components/Tags.h"
 #include "Systems/TilemapLoaderSystem.h"
+#include "Systems/CameraSystems.h"
 #include "Tilemap.h"
 #include <fstream>      
 #include <sstream>     
 #include <string>      
 #include <vector>
+#include <cmath> 
 
 static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
     std::ifstream f(path);
@@ -59,34 +61,28 @@ static Rectangle SrcFromIndex4x4(int idx, const Texture2D& tex) {
     return { x, y, (float)tileW, (float)tileH };
 }
 
-static void system_input(entt::registry& reg, float dt) {
+static void system_input(entt::registry& reg, float /*dt*/) {
     auto view = reg.view<Transform2D, InputControlled, PlayerTag>();
-    for (auto e : view) {
-        auto& t = view.get<Transform2D>(e);
+    view.each([](Transform2D& t) {
         t.velocity = {0,0};
         if (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT))  t.velocity.x = -t.speed;
         if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT)) t.velocity.x =  t.speed;
         if (IsKeyDown(KEY_W) || IsKeyDown(KEY_UP))    t.velocity.y = -t.speed;
         if (IsKeyDown(KEY_S) || IsKeyDown(KEY_DOWN))  t.velocity.y =  t.speed;
-    }
+    });
 }
 
 static void system_movement(entt::registry& reg, float dt) {
     auto view = reg.view<Transform2D>();
-    for (auto e : view) {
-        auto& t = view.get<Transform2D>(e);
+    view.each([dt](Transform2D& t) {
         t.position.x += t.velocity.x * dt;
         t.position.y += t.velocity.y * dt;
-    }
+    });
 }
 
 static void system_animation(entt::registry& reg, float dt) {
     auto view = reg.view<Animator, Sprite, Transform2D>();
-    for (auto e : view) {
-        auto& a = view.get<Animator>(e);
-        auto& s = view.get<Sprite>(e);
-        auto& t = view.get<Transform2D>(e);
-
+    view.each([dt](Animator& a, Sprite& s, Transform2D& t) {
         std::string state;
         if (t.velocity.x == 0 && t.velocity.y == 0) {
             if (a.state.rfind("walk_", 0) == 0)
@@ -99,41 +95,41 @@ static void system_animation(entt::registry& reg, float dt) {
                 state = (t.velocity.y > 0) ? "walk_down" : "walk_up";
         }
 
-        // si cambió de anim, resetea contador
         if (state != a.state) {
             a.state = state;
             a.timeAcc = 0.f;
             a.current = a.clips[state].startFrame;
         }
 
-        // avanzar frames
         const auto& clip = a.clips[a.state];
         a.timeAcc += dt;
         const float frameDur = 1.0f / clip.fps;
         while (a.timeAcc >= frameDur) {
             a.timeAcc -= frameDur;
-            int localIndex = ( (a.current - clip.startFrame) + 1 ) % clip.length;
+            int localIndex = ((a.current - clip.startFrame) + 1) % clip.length;
             a.current = clip.startFrame + localIndex;
         }
 
-        // actualizar rect fuente
+        // actualizar src en el sprite
         int col = a.current % a.columns;
         int row = a.current / a.columns;
-        s.src = { (float)(col * a.frameWidth),
-                  (float)(row * a.frameHeight),
-                  (float)a.frameWidth, (float)a.frameHeight };
+        s.src = {
+            (float)(col * a.frameWidth),
+            (float)(row * a.frameHeight),
+            (float)a.frameWidth,
+            (float)a.frameHeight
+        };
         s.currentAnim = a.state;
-    }
+    });
 }
 
 static void system_render(entt::registry& reg, Texture2D& bg) {
-    BeginDrawing();
+    // fondo detrás
     DrawTexture(bg, 0, 0, WHITE);
 
+    // sprites
     auto view = reg.view<Sprite, Transform2D>();
-    for (auto e : view) {
-        auto& s = view.get<Sprite>(e);
-        auto& t = view.get<Transform2D>(e);
+    view.each([](Sprite& s, Transform2D& t) {
         DrawTexturePro(
             *s.texture,
             s.src,
@@ -142,30 +138,21 @@ static void system_render(entt::registry& reg, Texture2D& bg) {
             0.0f,
             WHITE
         );
-    }
-
-    EndDrawing();
+    });
 }
 
 void Scene::setup() {
-    hero = LoadTexture(".\\assets\\sprites\\arbol.png");  
-    bee = LoadTexture(".\\assets\\sprites\\abeja.png");
+    // Carga assets (rutas coherentes)
+    hero = LoadTexture("assets/sprites/arbol.png");
+    bee  = LoadTexture("assets/sprites/abeja.png");
 
     if (hero.id == 0) TraceLog(LOG_ERROR, "HERO NOT LOADED");
-    if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
-
-    TilemapLoaderSystem loader;
-    loader.setScene(this);
-    loader.update();
+    if (bee.id  == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
 
     SetTextureFilter(bee, TEXTURE_FILTER_POINT);
 
-    if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
-
-    if (!bee.id) {
-        TraceLog(LOG_ERROR, "BEE NOT LOADED");
-    } else {
-        // spawnea 2 abejas en posiciones aleatorias visibles
+    // Spawnear 2 abejas si la textura cargó
+    if (bee.id != 0) {
         for (int i = 0; i < 2; ++i) {
             float x = (float)GetRandomValue(80, GetScreenWidth()  - 80);
             float y = (float)GetRandomValue(80, GetScreenHeight() - 80);
@@ -174,34 +161,41 @@ void Scene::setup() {
         TraceLog(LOG_INFO, "Spawned %d bees", (int)bees.size());
     }
 
-    // Arbol
-    arbCols = 4;
-    arbRows = 4;
+    // Arbol (animación)
+    arbCols = 4; arbRows = 4;
     arbTotalFrames = arbCols * arbRows;
-
     arbFrameW = hero.width  / arbCols;
     arbFrameH = hero.height / arbRows;
-
-    arbFps = 8.0f;
-    arbAcc = 0.0f;
-    arbFrame = 0;
-    animStartCol = 0;    
-    animEndCol   = 1;
-    animRow = 0;
-    animCol = animStartCol;
-
+    arbFps = 8.0f; arbAcc = 0.0f; arbFrame = 0;
+    animStartCol = 0; animEndCol = 1; animRow = 0; animCol = animStartCol;
     arbPos = { 300, 100 };
     arbScale = 0.5f;
     moveSpeed = 140.0f;
 
-    // Abeja
+    // Config abeja (por si lo usas al crear clips)
     BeeEnemy b;
-    b.cols = 4;
-    b.rows = 2;
-    b.frameW = bee.width  / b.cols; 
+    b.cols = 4; b.rows = 2;
+    b.frameW = bee.width  / b.cols;
     b.frameH = bee.height / b.rows;
-    b.startCol = 0;
-    b.endCol   = 3; 
+    b.startCol = 0; b.endCol = 3;
+
+    TilemapLoaderSystem loader;
+    loader.setScene(this);
+    loader.update();
+
+    // === CÁMARA: setup + bounds con loader ===
+    int worldW = loader.getPixelWidth();   // cols * tileW
+    int worldH = loader.getPixelHeight();  // rows * tileH
+    Rectangle worldBounds{ 0, 0, (float)worldW, (float)worldH };
+
+    CameraSetupSystem setupCam;
+    setupCam(reg, worldBounds);
+
+    auto camView = reg.view<Camera2DComponent, TagCamera>();
+    bool found = false;
+    camView.each([&](Camera2DComponent &c) {       
+        if (!found) { activeCamera = c.cam; found = true; }
+    });
 }
 
 void Scene::update() {
@@ -277,11 +271,25 @@ void Scene::update() {
 
     // --- ACTUALIZAR ABEJAS ---
     for (auto& b : bees) updateBee(b, dt);
+
+    // Actualizar sistemas de cámara
+    CameraFollowSystem follow;
+    follow(reg, dt);
+
+    CameraShakeSystem shake;
+    shake.update(reg, dt);
+
+    auto camView = reg.view<Camera2DComponent, TagCamera>();
+    camView.each([&](Camera2DComponent &c) { 
+        activeCamera = c.cam;
+    });
 }
 
 void Scene::render() {
     // Fondo
     renderTilemap();
+
+    BeginMode2D(activeCamera);
 
     // Sprite animado
     if (hero.id) {
@@ -297,6 +305,8 @@ void Scene::render() {
 
         Rectangle dst{ arbPos.x, arbPos.y, w, h };
         Vector2 origin{ w/2.0f, h/2.0f };  
+
+        EndMode2D();
 
         DrawTexturePro(hero, src, dst, origin, 0.0f, WHITE);
     }

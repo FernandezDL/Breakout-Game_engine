@@ -40,6 +40,7 @@ private:
     Vector2 arbPos{ 300, 100 }; // posición donde dibujar
     float arbScale = 0.5f;      // escala para dibujar grande
     float   moveSpeed = 140.0f; // velocidad de movimiento en píxeles por segundo
+    Camera2D activeCamera{};
 
 struct BeeEnemy {
     Vector2 pos{0,0};
