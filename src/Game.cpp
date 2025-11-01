@@ -22,9 +22,9 @@ void Game::setup() {
 
     InitWindow(800, 450, "Final");
     SetTargetFPS(60);
-    SetExitKey(KEY_NULL);          // Desactiva ESC para que no cierre sola
-    isRunning = true;              // << MUY IMPORTANTE
-    frameCount = 0;                     // reinicia contador
+    SetExitKey(KEY_NULL);         
+    isRunning = true;            
+    frameCount = 0;                  
     TraceLog(LOG_INFO, "Game Start!");
     currentScene->setup();
 }

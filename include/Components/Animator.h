@@ -11,11 +11,10 @@ struct AnimClip {
 struct Animator {
     int frameWidth  = 32;
     int frameHeight = 32;
-    int columns     = 8;   // columnas del sheet
+    int columns     = 8;  
     float timeAcc   = 0.0f;
-    int current     = 0;   // índice de frame absoluto (0..N-1)
+    int current     = 0;   
     std::string state = "idle_down";
 
-    // mapas: "idle_down","walk_left","walk_right","walk_up","walk_down"...
     std::unordered_map<std::string, AnimClip> clips;
 };

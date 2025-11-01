@@ -228,7 +228,7 @@ void Scene::update() {
         vx /= len; vy /= len;
     }
 
-    // --- COLISIÓN CON INTGRID (centrado en arbPos)
+    // --- COLISIÓN CON INTGRID ---
     const float w = arbFrameW * arbScale;
     const float h = arbFrameH * arbScale;
 
@@ -237,6 +237,18 @@ void Scene::update() {
         arbPos.y - h * 0.5f,
         w, h
     };
+
+    int cx = (int)std::floor(arbPos.x / tilemap.tileW);
+    int cy = (int)std::floor(arbPos.y / tilemap.tileH);
+    CellType cur = intgrid.inBounds(cx, cy) ? intgrid.get(cx, cy) : CellType::Blocked;
+
+    auto speedFactorFor = [](CellType t) -> float {
+        switch (t) {
+            case CellType::Slow:   return 0.5f;  // 50% de velocidad
+            default:               return 1.0f;
+        }
+    };
+    float factor = speedFactorFor(cur);
 
     Vector2 proposedDelta { vx * moveSpeed * dt, vy * moveSpeed * dt };
     Vector2 applied = moveWithGrid(this, playerRect, proposedDelta);
@@ -297,6 +309,9 @@ void Scene::update() {
     static IntGridSystem igsys;
     igsys.setScene(this);
     igsys.update();
+
+    extern void TriggerSystem_Update(Scene* scene, float dt);
+    TriggerSystem_Update(this, dt);
 }
 
 void Scene::render() {
@@ -331,7 +346,6 @@ void Scene::render() {
 }
 
 void Scene::shutdown() {
-    // UnloadTexture(bg);
     UnloadTexture(hero);
     UnloadTexture(bee);
 }
@@ -366,7 +380,7 @@ void Scene::updateBee(BeeEnemy& b, float dt) {
     b.pos.x += b.vel.x * dt;
     b.pos.y += b.vel.y * dt;
 
-    // rebotar en bordes (anclado al centro)
+    // rebotar en bordes 
     float w = b.frameW * b.scale, h = b.frameH * b.scale;
     float minX = w*0.5f, maxX = GetScreenWidth()  - w*0.5f;
     float minY = h*0.5f, maxY = GetScreenHeight() - h*0.5f;
@@ -378,7 +392,6 @@ void Scene::updateBee(BeeEnemy& b, float dt) {
     // fila según dirección horizontal
     b.row = (b.vel.x >= 0) ? 0 : 1;
 
-    // animación 0..3 (vuelo continuo)
     b.acc += dt;
     const float step = 1.0f / b.fps;
     while (b.acc >= step) {

@@ -3,16 +3,14 @@
 #include <raylib.h>
 #include <cmath>
 
-// Trata celdas fuera del grid como bloqueadas (seguro)
 inline bool gridCellWalkable(const Scene* scene, int cx, int cy) {
     const auto& ig = scene->intgrid;
     if (!ig.inBounds(cx, cy)) return false;
     return ig.isWalkable(cx, cy);
 }
 
-// Revisa 4 esquinas del rectángulo
 inline bool rectWalkableOnGrid(const Scene* scene, Rectangle r) {
-    const float inset = 1.0f; // evita falsos “pega” con bordes
+    const float inset = 1.0f; 
     const auto& tm = scene->tilemap;
 
     Vector2 pts[4] = {
@@ -29,7 +27,6 @@ inline bool rectWalkableOnGrid(const Scene* scene, Rectangle r) {
     return true;
 }
 
-// Barrido eje X luego Y (desliza en paredes)
 inline Vector2 moveWithGrid(const Scene* scene, Rectangle actorRect, Vector2 delta) {
     Rectangle r = actorRect;
 

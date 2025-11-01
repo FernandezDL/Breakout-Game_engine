@@ -10,4 +10,9 @@ struct Tilemap {
     int tilesetCols = 4;         
     std::vector<int> tiles;
     bool loaded = false;
+
+    inline int get(int x, int y) const {
+        if (x < 0 || y < 0 || x >= width || y >= height) return 0;
+        return tiles[y * width + x];
+    }
 };

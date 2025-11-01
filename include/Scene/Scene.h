@@ -24,6 +24,9 @@ public:
     const Tilemap& getTilemap() const { return tilemap; }
 
     void renderTilemap();
+    inline Vector2 getArbPos() const { return arbPos; }
+    inline void setArbPos(Vector2 p) { arbPos = p; }
+    inline void setArbPos(float x, float y) { arbPos = { x, y }; }
 
 private:
     int arbCols = 4;            // columnas en el spritesheet

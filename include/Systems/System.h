@@ -15,4 +15,4 @@ public:
     virtual void render() {}
 };
 
-#endif // SYSTEM_H_GUARD
+#endif 
