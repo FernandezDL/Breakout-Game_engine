@@ -10,6 +10,7 @@
 #include <sstream>     
 #include <string>      
 #include <vector>
+#include "Systems/IntGridSystem.h"
 
 static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
     std::ifstream f(path);
@@ -158,6 +159,10 @@ void Scene::setup() {
     loader.setScene(this);
     loader.update();
 
+    IntGridSystem igsys;
+    igsys.setScene(this);
+    igsys.setup();
+
     SetTextureFilter(bee, TEXTURE_FILTER_POINT);
 
     if (bee.id == 0) TraceLog(LOG_ERROR, "BEE NOT LOADED");
@@ -277,11 +282,20 @@ void Scene::update() {
 
     // --- ACTUALIZAR ABEJAS ---
     for (auto& b : bees) updateBee(b, dt);
+
+    static IntGridSystem igsys;
+    igsys.setScene(this);
+    igsys.update();
 }
 
 void Scene::render() {
     // Fondo
     renderTilemap();
+
+    // IntGrid
+    static IntGridSystem igsys;
+    igsys.setScene(this);
+    igsys.render();
 
     // Sprite animado
     if (hero.id) {

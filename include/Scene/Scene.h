@@ -3,6 +3,7 @@
 #include <raylib.h>
 #include <vector>
 #include "Tilemap.h"
+#include "IntGrid.h" 
 
 class Scene {
 public:
@@ -17,6 +18,7 @@ public:
     void shutdown();
 
     Tilemap tilemap;
+    IntGrid intgrid;
 
     Tilemap& getTilemap() { return tilemap; }
     const Tilemap& getTilemap() const { return tilemap; }
@@ -68,4 +70,5 @@ private:
     void spawnBee(Vector2 p);
     void updateBee(BeeEnemy& b, float dt);
     void renderBee(const BeeEnemy& b);
+    void renderIntGrid();
 };
