@@ -11,6 +11,7 @@
 #include <string>      
 #include <vector>
 #include "Systems/IntGridSystem.h"
+#include "CollisionGrid.h"
 
 static bool LoadCSV(const std::string& path, int& W, int& H, std::vector<int>& out) {
     std::ifstream f(path);
@@ -227,13 +228,23 @@ void Scene::update() {
         vx /= len; vy /= len;
     }
 
-    // Mover
-    arbPos.x += vx * moveSpeed * dt;
-    arbPos.y += vy * moveSpeed * dt;
+    // --- COLISIÓN CON INTGRID (centrado en arbPos)
+    const float w = arbFrameW * arbScale;
+    const float h = arbFrameH * arbScale;
+
+    Rectangle playerRect {
+        arbPos.x - w * 0.5f,
+        arbPos.y - h * 0.5f,
+        w, h
+    };
+
+    Vector2 proposedDelta { vx * moveSpeed * dt, vy * moveSpeed * dt };
+    Vector2 applied = moveWithGrid(this, playerRect, proposedDelta);
+
+    arbPos.x += applied.x;
+    arbPos.y += applied.y;
 
     // Mantener dentro de pantalla
-    float w = arbFrameW * arbScale;
-    float h = arbFrameH * arbScale;
     float minX = w * 0.5f, maxX = GetScreenWidth()  - w * 0.5f;
     float minY = h * 0.5f, maxY = GetScreenHeight() - h * 0.5f;
     if (arbPos.x < minX) arbPos.x = minX;
