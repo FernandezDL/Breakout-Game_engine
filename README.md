@@ -1,4 +1,12 @@
-# Breakout-Game_engine
+# Raíces perdidas - Tilemap
+
+## Descripción
+Teniendo en cuenta que en los bosques no hay solo grama, con los tilemaps se agregó la posibilidad de tener pedazos de tierra también, por lo que se definió un archivo CSV que indicara el tipo de tile que se iba a poner en cada espacio de la pantalla y así poder variar el fondo del juego.
+
+## Video 
+https://github.com/user-attachments/assets/6ae41ae8-574e-43df-b771-2635eecaea46
+
+## Reflexión
 
 ## Comandos para compliar
 1. Borrar build en caso de tenerlo
