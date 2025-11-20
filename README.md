@@ -7,6 +7,13 @@ Teniendo en cuenta que en los bosques no hay solo grama, con los tilemaps se agr
 https://github.com/user-attachments/assets/6ae41ae8-574e-43df-b771-2635eecaea46
 
 ## Reflexión
+Usar una imagen de fondo en la fase de los sprites representa una buena opción para dar un inicio al juego, sin embargo, y por lo menos en mi caso, hacerlo de esta manera generaba un resultado que, a pesar de verse bien, tenía una baja calidad y se miraba incluso "estirado".
+
+
+Agregar los tilemaps permitió generar un nuevo patrón para el fondo del videojuego y evitar que el fondo sea de un solo color y diseño repetitivo, sino que utiliza una mezcla de varios tiles para dar personalidad al juego desde el background.
+
+
+Uno de los problemas que enfrenté al implementar este detalle fue el definir el tamaño correcto que tuvieras las tiles, pues en la mayoría de casos los tamaños que generaba eran o demasiado pequeños, o todos se sobreponían entre ellos. Hubieron varias iteraciones de prueba y error, hasta que logré llegar a una configuración donde las tiles se miraban de un buen tamaño relativo al de los personajes, lo suficientemente grande para resaltar y mostrar los detalles en el juego, pero no demasiado que con dos tiles se llenara toda la pantalla
 
 ## Comandos para compliar
 1. Borrar build en caso de tenerlo
